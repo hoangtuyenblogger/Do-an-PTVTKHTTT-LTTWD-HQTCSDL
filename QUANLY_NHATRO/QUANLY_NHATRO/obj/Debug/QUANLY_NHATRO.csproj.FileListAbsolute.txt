@@ -1,0 +1,13 @@
+D:\Nam II Dai Hoc Thu Dau Mot\Hoc ki II\Do an PTKTHTTT & Lap trinh tren Windows\QUANLY_NHATRO\QUANLY_NHATRO\obj\Debug\QUANLY_NHATRO.csprojAssemblyReference.cache
+D:\Nam II Dai Hoc Thu Dau Mot\Hoc ki II\Do an PTKTHTTT & Lap trinh tren Windows\QUANLY_NHATRO\QUANLY_NHATRO\obj\Debug\QUANLY_NHATRO.Properties.Resources.resources
+D:\Nam II Dai Hoc Thu Dau Mot\Hoc ki II\Do an PTKTHTTT & Lap trinh tren Windows\QUANLY_NHATRO\QUANLY_NHATRO\obj\Debug\QUANLY_NHATRO.csproj.GenerateResource.cache
+D:\Nam II Dai Hoc Thu Dau Mot\Hoc ki II\Do an PTKTHTTT & Lap trinh tren Windows\QUANLY_NHATRO\QUANLY_NHATRO\obj\Debug\QUANLY_NHATRO.csproj.CoreCompileInputs.cache
+D:\Nam II Dai Hoc Thu Dau Mot\Hoc ki II\Do an PTKTHTTT & Lap trinh tren Windows\QUANLY_NHATRO\QUANLY_NHATRO\bin\Debug\QUANLY_NHATRO.exe.config
+D:\Nam II Dai Hoc Thu Dau Mot\Hoc ki II\Do an PTKTHTTT & Lap trinh tren Windows\QUANLY_NHATRO\QUANLY_NHATRO\bin\Debug\QUANLY_NHATRO.exe
+D:\Nam II Dai Hoc Thu Dau Mot\Hoc ki II\Do an PTKTHTTT & Lap trinh tren Windows\QUANLY_NHATRO\QUANLY_NHATRO\bin\Debug\QUANLY_NHATRO.pdb
+D:\Nam II Dai Hoc Thu Dau Mot\Hoc ki II\Do an PTKTHTTT & Lap trinh tren Windows\QUANLY_NHATRO\QUANLY_NHATRO\obj\Debug\QUANLY_NHATRO.exe
+D:\Nam II Dai Hoc Thu Dau Mot\Hoc ki II\Do an PTKTHTTT & Lap trinh tren Windows\QUANLY_NHATRO\QUANLY_NHATRO\obj\Debug\QUANLY_NHATRO.pdb
+D:\Nam II Dai Hoc Thu Dau Mot\Hoc ki II\Do an PTKTHTTT & Lap trinh tren Windows\QUANLY_NHATRO\QUANLY_NHATRO\obj\Debug\QUANLY_NHATRO.Form_Login.resources
+D:\Nam II Dai Hoc Thu Dau Mot\Hoc ki II\Do an PTKTHTTT & Lap trinh tren Windows\QUANLY_NHATRO\QUANLY_NHATRO\obj\Debug\QUANLY_NHATRO.frm_main.resources
+D:\Nam II Dai Hoc Thu Dau Mot\Hoc ki II\Do an PTKTHTTT & Lap trinh tren Windows\QUANLY_NHATRO\QUANLY_NHATRO\obj\Debug\QUANLY_NHATRO.Khach_Tro.resources
+D:\Nam II Dai Hoc Thu Dau Mot\Hoc ki II\Do an PTKTHTTT & Lap trinh tren Windows\QUANLY_NHATRO\QUANLY_NHATRO\obj\Debug\QUANLY_NHATRO.frm_dangki.resources
