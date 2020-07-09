@@ -40,8 +40,7 @@
             this.Picktime2 = new System.Windows.Forms.DateTimePicker();
             this.comboTiencoc = new System.Windows.Forms.ComboBox();
             this.btn_dangki = new System.Windows.Forms.Button();
-            this.btn_huy = new System.Windows.Forms.Button();
-            this.btn_kiemtra = new System.Windows.Forms.Button();
+            this.btn_thoat = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.group_thongtindangki = new System.Windows.Forms.GroupBox();
             this.group_thongtindangki.SuspendLayout();
@@ -147,31 +146,22 @@
             this.btn_dangki.UseVisualStyleBackColor = true;
             this.btn_dangki.Click += new System.EventHandler(this.btn_dangki_Click);
             // 
-            // btn_huy
+            // btn_thoat
             // 
-            this.btn_huy.Location = new System.Drawing.Point(372, 331);
-            this.btn_huy.Name = "btn_huy";
-            this.btn_huy.Size = new System.Drawing.Size(91, 34);
-            this.btn_huy.TabIndex = 11;
-            this.btn_huy.Text = "Hủy";
-            this.btn_huy.UseVisualStyleBackColor = true;
-            // 
-            // btn_kiemtra
-            // 
-            this.btn_kiemtra.Location = new System.Drawing.Point(488, 55);
-            this.btn_kiemtra.Name = "btn_kiemtra";
-            this.btn_kiemtra.Size = new System.Drawing.Size(90, 25);
-            this.btn_kiemtra.TabIndex = 12;
-            this.btn_kiemtra.Text = "Kiểm tra phòng";
-            this.btn_kiemtra.UseVisualStyleBackColor = true;
-            this.btn_kiemtra.Click += new System.EventHandler(this.btn_kiemtra_Click);
+            this.btn_thoat.Location = new System.Drawing.Point(372, 331);
+            this.btn_thoat.Name = "btn_thoat";
+            this.btn_thoat.Size = new System.Drawing.Size(91, 34);
+            this.btn_thoat.TabIndex = 11;
+            this.btn_thoat.Text = "Thoát";
+            this.btn_thoat.UseVisualStyleBackColor = true;
+            this.btn_thoat.Click += new System.EventHandler(this.btn_thoat_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.DimGray;
-            this.label6.Location = new System.Drawing.Point(232, 18);
+            this.label6.Location = new System.Drawing.Point(195, 9);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(352, 41);
             this.label6.TabIndex = 13;
@@ -184,7 +174,6 @@
             this.group_thongtindangki.Controls.Add(this.combo_Hoten);
             this.group_thongtindangki.Controls.Add(this.label2);
             this.group_thongtindangki.Controls.Add(this.label3);
-            this.group_thongtindangki.Controls.Add(this.btn_kiemtra);
             this.group_thongtindangki.Controls.Add(this.label4);
             this.group_thongtindangki.Controls.Add(this.label5);
             this.group_thongtindangki.Controls.Add(this.Picktime1);
@@ -204,10 +193,12 @@
             this.ClientSize = new System.Drawing.Size(724, 407);
             this.Controls.Add(this.group_thongtindangki);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.btn_huy);
+            this.Controls.Add(this.btn_thoat);
             this.Controls.Add(this.btn_dangki);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(740, 446);
+            this.MinimumSize = new System.Drawing.Size(740, 446);
             this.Name = "frm_dangki";
             this.Text = "Đăng kí thuê phòng";
             this.Load += new System.EventHandler(this.frm_dangki_Load);
@@ -231,8 +222,7 @@
         private System.Windows.Forms.DateTimePicker Picktime2;
         private System.Windows.Forms.ComboBox comboTiencoc;
         private System.Windows.Forms.Button btn_dangki;
-        private System.Windows.Forms.Button btn_huy;
-        private System.Windows.Forms.Button btn_kiemtra;
+        private System.Windows.Forms.Button btn_thoat;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox group_thongtindangki;
     }

@@ -23,11 +23,10 @@ namespace QUANLY_NHATRO
             InitializeComponent();
         }
 
-   
         public void SetConTrol(bool ok)
         {
             txtHoTen.Enabled = ok;
-            txtGioiTinh.Enabled = ok;
+            bombo_GioiTinh.Enabled = ok;
             txtCMND.Enabled = ok;
             txtNgheNghiep.Enabled = ok;
             txtSDT.Enabled = ok;
@@ -36,13 +35,10 @@ namespace QUANLY_NHATRO
             btnSua.Enabled = !ok;
             btnXoa.Enabled = !ok;
             btnLuu.Enabled = ok;
-            btnHuy.Enabled = ok;
+            btn_Huy.Enabled = ok;
 
         }
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
-        }
+        
 
         private void Khach_Tro_Load(object sender, EventArgs e)
         {
@@ -56,10 +52,9 @@ namespace QUANLY_NHATRO
             txtHoTen.DataBindings.Add("text", ds.Tables[0], "HoTen");
             txtSDT.DataBindings.Add("text", ds.Tables[0], "SDT");
             txtCMND.DataBindings.Add("text", ds.Tables[0], "CMND");
-            txtGioiTinh.DataBindings.Add("text", ds.Tables[0], "GioiTinh");
+            bombo_GioiTinh.DataBindings.Add("text", ds.Tables[0], "GioiTinh");
             txtNgheNghiep.DataBindings.Add("text", ds.Tables[0], "NgheNghiep");
 
-            _conn.Disconnect();
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
@@ -89,9 +84,8 @@ namespace QUANLY_NHATRO
             // làm rỗng text box
             txtHoTen.Text = string.Empty; // = ""
             txtCMND.Text = string.Empty;
-            txtGioiTinh.Text = string.Empty;
             txtSDT.Text = string.Empty;
-            txtSDT.Text = string.Empty;
+            txtNgheNghiep.Text = string.Empty;
             // ---------------------
             txtHoTen.Focus();
         }
@@ -105,7 +99,7 @@ namespace QUANLY_NHATRO
             {
                 // lưu thêm mới
                 // Tạo command
-                SqlCommand cm = _conn.cm;
+                SqlCommand cm = new SqlCommand();
 
                 //Thiết lập các thuộc tính cho đối tượng Command
                 cm.Connection = _conn.conn;
@@ -117,11 +111,19 @@ namespace QUANLY_NHATRO
                 //cm.Parameters.AddWithValue("@hoten", txtHoTen.Text);
                 cm.Parameters.Add(new SqlParameter("@sdt", txtSDT.Text));
                 cm.Parameters.Add(new SqlParameter("@cmnd", txtCMND.Text));
-                cm.Parameters.Add(new SqlParameter("@gt", txtGioiTinh.Text));
+                cm.Parameters.Add(new SqlParameter("@gt", bombo_GioiTinh.Text));
                 cm.Parameters.Add(new SqlParameter("@nghenghiep", txtNgheNghiep.Text));
 
                 // chạy command
-                cm.ExecuteNonQuery();
+                try
+                {
+                    cm.ExecuteNonQuery();
+                }
+                catch(Exception E)
+                {
+                    MessageBox.Show("Lỗi thêm khách trọ !!!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                
 
                 // đặtl lại trạng thái
                 data_KhachTro.Enabled = true;
@@ -143,7 +145,7 @@ namespace QUANLY_NHATRO
                 cm.Parameters.Add(new SqlParameter("@hoten", txtHoTen.Text));
                 cm.Parameters.Add(new SqlParameter("@sdt", txtSDT.Text));
                 cm.Parameters.Add(new SqlParameter("@cmnd", txtCMND.Text));
-                cm.Parameters.Add(new SqlParameter("@gt", txtGioiTinh.Text));
+                cm.Parameters.Add(new SqlParameter("@gt", bombo_GioiTinh.Text));
                 cm.Parameters.Add(new SqlParameter("@nghenghiep", txtNgheNghiep.Text));
 
                 // chạy command
@@ -175,6 +177,13 @@ namespace QUANLY_NHATRO
         }
 
         private void btnHuy_Click(object sender, EventArgs e)
+        {
+            Khach_Tro f = new Khach_Tro();
+            f.Show();
+            this.Close();
+        }
+
+        private void btn_Huy_Click(object sender, EventArgs e)
         {
             // đặt lại trạng thái
             data_KhachTro.Enabled = true;

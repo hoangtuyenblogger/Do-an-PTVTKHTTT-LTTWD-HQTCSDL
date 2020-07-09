@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -65,6 +68,18 @@
     <Compile Include="frm_main.Designer.cs">
       <DependentUpon>frm_main.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_tinhtien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_tinhtien.Designer.cs">
+      <DependentUpon>frm_tinhtien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_traphong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_traphong.Designer.cs">
+      <DependentUpon>frm_traphong.cs</DependentUpon>
+    </Compile>
     <Compile Include="Khach_Tro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +96,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_main.resx">
       <DependentUpon>frm_main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_tinhtien.resx">
+      <DependentUpon>frm_tinhtien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_traphong.resx">
+      <DependentUpon>frm_traphong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Khach_Tro.resx">
       <DependentUpon>Khach_Tro.cs</DependentUpon>
@@ -119,6 +140,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\55711459_755644688164610_8499470271369969664_o.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="favicon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

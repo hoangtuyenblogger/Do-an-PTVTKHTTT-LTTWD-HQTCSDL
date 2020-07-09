@@ -11,3 +11,5 @@ D:\Nam II Dai Hoc Thu Dau Mot\Hoc ki II\Do an PTKTHTTT & Lap trinh tren Windows\
 D:\Nam II Dai Hoc Thu Dau Mot\Hoc ki II\Do an PTKTHTTT & Lap trinh tren Windows\QUANLY_NHATRO\QUANLY_NHATRO\obj\Debug\QUANLY_NHATRO.frm_main.resources
 D:\Nam II Dai Hoc Thu Dau Mot\Hoc ki II\Do an PTKTHTTT & Lap trinh tren Windows\QUANLY_NHATRO\QUANLY_NHATRO\obj\Debug\QUANLY_NHATRO.Khach_Tro.resources
 D:\Nam II Dai Hoc Thu Dau Mot\Hoc ki II\Do an PTKTHTTT & Lap trinh tren Windows\QUANLY_NHATRO\QUANLY_NHATRO\obj\Debug\QUANLY_NHATRO.frm_dangki.resources
+D:\Nam II Dai Hoc Thu Dau Mot\Hoc ki II\Do an PTKTHTTT & Lap trinh tren Windows\QUANLY_NHATRO\QUANLY_NHATRO\obj\Debug\QUANLY_NHATRO.frm_traphong.resources
+D:\Nam II Dai Hoc Thu Dau Mot\Hoc ki II\Do an PTKTHTTT & Lap trinh tren Windows\QUANLY_NHATRO\QUANLY_NHATRO\obj\Debug\QUANLY_NHATRO.frm_tinhtien.resources

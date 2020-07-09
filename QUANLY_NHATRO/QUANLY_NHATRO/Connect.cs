@@ -57,7 +57,7 @@ namespace QUANLY_NHATRO
         {
             Create_connect(); // mở kết nối
             cm = new SqlCommand(query, conn);
-            int row =  cm.ExecuteNonQuery(); 
+            int row =  (int)cm.ExecuteNonQuery(); 
             if(row == 0)
             {
                 // not updated

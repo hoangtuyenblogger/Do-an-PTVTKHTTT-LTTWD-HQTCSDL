@@ -19,7 +19,7 @@ namespace QUANLY_NHATRO
             InitializeComponent();
         }
 
-        bool Login(string taikhoan, string matkhau)
+        public bool Login(string taikhoan, string matkhau)
         {
             Connect _conn = new Connect();
             _conn.Create_connect();
@@ -45,15 +45,16 @@ namespace QUANLY_NHATRO
         {
             string tk = txtTaiKhoan.Text.ToString();
             string mk = txtMatKhau.Text.ToString();
-            if(Login(tk,mk))
+            if(Login(tk, mk) == true)
             {
-                frm_main main = new frm_main();              
-                main.Show();
-                this.Visible = false;
+                frm_main f = new frm_main();
+                f.Show();
+                this.Hide();
+                
             }
             else
             {
-                // 
+                //
             }
         }
     }

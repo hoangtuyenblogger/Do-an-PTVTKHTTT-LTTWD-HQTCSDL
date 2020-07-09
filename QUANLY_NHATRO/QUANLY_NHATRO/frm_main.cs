@@ -13,62 +13,20 @@ namespace QUANLY_NHATRO
 {
     public partial class frm_main : Form
     {
-        string conn_str = @"Data Source=ADMIN;Initial Catalog=QuanLy_NhaTro;Integrated Security=True;Connect Timeout=60";
-        SqlConnection conn = new SqlConnection();
-        SqlDataAdapter da = new SqlDataAdapter();
-        SqlCommand cm = new SqlCommand();
-        DataSet ds = new DataSet();
-        DataTable tb = new DataTable();
         public frm_main()
         {
             InitializeComponent();
         }
 
-        void Create_connect()
-        {
-            try
-            {
-                conn = new SqlConnection(conn_str);
-                conn.Open();
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show("Lỗi kết nối cơ sở dữ liệu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-        void Disconnect()
-        {
-            conn.Close();
-            da.Dispose();
-            da = null;
-        }
-        DataSet GetData_SQL(string query)
-        {
-            try
-            {
-                Create_connect(); // mở kết nối
-                cm = new SqlCommand(query, conn);
-                da = new SqlDataAdapter(cm);
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show("Lỗi kết nối cơ sở dữ liệu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            da.Fill(ds);
-            conn.Close();
-            Disconnect();
-            return ds;
-        }
-
+        bool login_status = false;
         private void frm_main_Load(object sender, EventArgs e)
         {
-            
-            Create_connect();
-            string query = "select TenPhong, MaKV, TrangThai, SoNguoiHienTai, SLToiDa from PHONGTRO";
-            ds = GetData_SQL(query);
-            dataPhong.DataSource = ds.Tables[0];
-            dataPhong.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-
+            Connect _conn = new Connect();
+            _conn.Create_connect();
+            _conn.ds = _conn.GetData_SQL("SELECT HoTen, GioiTinh, TenPhong, NgayVaoO FROM view_THONGTIN_KHACHTRO_PHONGTRO");
+            DATA_VIEW.DataSource = _conn.ds.Tables[0];
+            DATA_VIEW.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            DATA_VIEW.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
         }
 
         private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
@@ -82,14 +40,52 @@ namespace QUANLY_NHATRO
 
         private void thôngTinKháchTrọToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Khach_Tro khach_tro = new Khach_Tro();
-            khach_tro.Visible = true;
+            Khach_Tro f = new Khach_Tro();
+            f.ShowDialog();
         }
 
         private void đăngKíThuêPhòngToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frm_dangki dangki = new frm_dangki();
-            dangki.Visible = true;
+            frm_dangki f = new frm_dangki();
+            f.ShowDialog();
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            label1.Text = DateTime.Now.ToLongTimeString();
+        }
+
+        private void btn_ThongTinKhachTro_Click(object sender, EventArgs e)
+        {
+            Khach_Tro f = new Khach_Tro();
+            f.Show();
+        }
+
+        private void btn_DangKiThuePhong_Click(object sender, EventArgs e)
+        {
+            frm_dangki f = new frm_dangki();
+            f.ShowDialog();
+        }
+
+        private void btn_TraPhong_Click(object sender, EventArgs e)
+        {
+            frm_traphong f = new frm_traphong();
+            f.ShowDialog();
+        }
+
+        private void btn_ThanhToan_Click(object sender, EventArgs e)
+        {
+            frm_tinhtien f = new frm_tinhtien();
+            f.ShowDialog();
+        }
+
+        private void btn_LamMoi_Click(object sender, EventArgs e)
+        {
+            frm_main main = new frm_main();
+            main.Show();
+            this.Close();
+        }
+
+        
     }
 }
