@@ -53,21 +53,6 @@ namespace QUANLY_NHATRO
             return ds;
         }
 
-        public bool Update_SQL(string query)
-        {
-            Create_connect(); // mở kết nối
-            cm = new SqlCommand(query, conn);
-            int row =  (int)cm.ExecuteNonQuery(); 
-            if(row == 0)
-            {
-                // not updated
-                return false;
-            }
-            else
-            {
-                // updated
-                return true;
-            } 
-        }
+        
     }
 }

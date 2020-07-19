@@ -48,9 +48,15 @@
             this.btn_DangKiThuePhong = new System.Windows.Forms.Button();
             this.btn_TraPhong = new System.Windows.Forms.Button();
             this.btn_ThanhToan = new System.Windows.Forms.Button();
+            this.group_menu = new System.Windows.Forms.GroupBox();
+            this.combo_Phong = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txt_SoNguoiHienTai = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DATA_VIEW)).BeginInit();
+            this.group_menu.SuspendLayout();
             this.SuspendLayout();
             // 
             // thôngTinKháchTrọToolStripMenuItem
@@ -118,7 +124,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(707, 27);
+            this.groupBox1.Location = new System.Drawing.Point(707, 37);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(107, 47);
             this.groupBox1.TabIndex = 2;
@@ -135,9 +141,9 @@
             this.GioiTinh,
             this.TenPhong,
             this.NgayVao});
-            this.DATA_VIEW.Location = new System.Drawing.Point(0, 201);
+            this.DATA_VIEW.Location = new System.Drawing.Point(238, 218);
             this.DATA_VIEW.Name = "DATA_VIEW";
-            this.DATA_VIEW.Size = new System.Drawing.Size(585, 216);
+            this.DATA_VIEW.Size = new System.Drawing.Size(583, 196);
             this.DATA_VIEW.TabIndex = 3;
             // 
             // HoTen
@@ -166,7 +172,7 @@
             // 
             // btn_ThongTinKhachTro
             // 
-            this.btn_ThongTinKhachTro.Location = new System.Drawing.Point(676, 94);
+            this.btn_ThongTinKhachTro.Location = new System.Drawing.Point(41, 32);
             this.btn_ThongTinKhachTro.Name = "btn_ThongTinKhachTro";
             this.btn_ThongTinKhachTro.Size = new System.Drawing.Size(138, 43);
             this.btn_ThongTinKhachTro.TabIndex = 4;
@@ -176,7 +182,7 @@
             // 
             // btn_DangKiThuePhong
             // 
-            this.btn_DangKiThuePhong.Location = new System.Drawing.Point(676, 160);
+            this.btn_DangKiThuePhong.Location = new System.Drawing.Point(41, 98);
             this.btn_DangKiThuePhong.Name = "btn_DangKiThuePhong";
             this.btn_DangKiThuePhong.Size = new System.Drawing.Size(138, 43);
             this.btn_DangKiThuePhong.TabIndex = 5;
@@ -186,7 +192,7 @@
             // 
             // btn_TraPhong
             // 
-            this.btn_TraPhong.Location = new System.Drawing.Point(676, 231);
+            this.btn_TraPhong.Location = new System.Drawing.Point(41, 169);
             this.btn_TraPhong.Name = "btn_TraPhong";
             this.btn_TraPhong.Size = new System.Drawing.Size(138, 43);
             this.btn_TraPhong.TabIndex = 6;
@@ -196,7 +202,7 @@
             // 
             // btn_ThanhToan
             // 
-            this.btn_ThanhToan.Location = new System.Drawing.Point(676, 305);
+            this.btn_ThanhToan.Location = new System.Drawing.Point(41, 243);
             this.btn_ThanhToan.Name = "btn_ThanhToan";
             this.btn_ThanhToan.Size = new System.Drawing.Size(138, 43);
             this.btn_ThanhToan.TabIndex = 7;
@@ -204,15 +210,66 @@
             this.btn_ThanhToan.UseVisualStyleBackColor = true;
             this.btn_ThanhToan.Click += new System.EventHandler(this.btn_ThanhToan_Click);
             // 
+            // group_menu
+            // 
+            this.group_menu.Controls.Add(this.btn_ThanhToan);
+            this.group_menu.Controls.Add(this.btn_TraPhong);
+            this.group_menu.Controls.Add(this.btn_DangKiThuePhong);
+            this.group_menu.Controls.Add(this.btn_ThongTinKhachTro);
+            this.group_menu.Location = new System.Drawing.Point(12, 104);
+            this.group_menu.Name = "group_menu";
+            this.group_menu.Size = new System.Drawing.Size(206, 302);
+            this.group_menu.TabIndex = 8;
+            this.group_menu.TabStop = false;
+            this.group_menu.Text = "Chức năng";
+            // 
+            // combo_Phong
+            // 
+            this.combo_Phong.FormattingEnabled = true;
+            this.combo_Phong.Items.AddRange(new object[] {
+            "Tất cả"});
+            this.combo_Phong.Location = new System.Drawing.Point(336, 104);
+            this.combo_Phong.Name = "combo_Phong";
+            this.combo_Phong.Size = new System.Drawing.Size(176, 21);
+            this.combo_Phong.TabIndex = 9;
+            this.combo_Phong.Text = "Tất cả";
+            this.combo_Phong.SelectionChangeCommitted += new System.EventHandler(this.combo_Phong_SelectionChangeCommitted);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(250, 104);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(68, 13);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Chọn phòng:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(549, 108);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(89, 13);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Số người hiện tại:";
+            // 
+            // txt_SoNguoiHienTai
+            // 
+            this.txt_SoNguoiHienTai.Location = new System.Drawing.Point(644, 105);
+            this.txt_SoNguoiHienTai.Name = "txt_SoNguoiHienTai";
+            this.txt_SoNguoiHienTai.Size = new System.Drawing.Size(91, 20);
+            this.txt_SoNguoiHienTai.TabIndex = 12;
+            // 
             // frm_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(826, 418);
-            this.Controls.Add(this.btn_ThanhToan);
-            this.Controls.Add(this.btn_TraPhong);
-            this.Controls.Add(this.btn_DangKiThuePhong);
-            this.Controls.Add(this.btn_ThongTinKhachTro);
+            this.Controls.Add(this.txt_SoNguoiHienTai);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.combo_Phong);
+            this.Controls.Add(this.group_menu);
             this.Controls.Add(this.DATA_VIEW);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
@@ -221,14 +278,15 @@
             this.MaximumSize = new System.Drawing.Size(842, 457);
             this.MinimumSize = new System.Drawing.Size(842, 457);
             this.Name = "frm_main";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Phần mềm quản lí nhà trọ - Trang Chủ";
             this.Load += new System.EventHandler(this.frm_main_Load);
-           
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DATA_VIEW)).EndInit();
+            this.group_menu.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -253,5 +311,10 @@
         private System.Windows.Forms.Button btn_DangKiThuePhong;
         private System.Windows.Forms.Button btn_TraPhong;
         private System.Windows.Forms.Button btn_ThanhToan;
+        private System.Windows.Forms.GroupBox group_menu;
+        private System.Windows.Forms.ComboBox combo_Phong;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txt_SoNguoiHienTai;
     }
 }

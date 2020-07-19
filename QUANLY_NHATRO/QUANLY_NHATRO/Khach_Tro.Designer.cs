@@ -298,6 +298,7 @@
             this.MaximumSize = new System.Drawing.Size(654, 452);
             this.MinimumSize = new System.Drawing.Size(654, 452);
             this.Name = "Khach_Tro";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thông tin khách trọ";
             this.Load += new System.EventHandler(this.Khach_Tro_Load);
             ((System.ComponentModel.ISupportInitialize)(this.data_KhachTro)).EndInit();

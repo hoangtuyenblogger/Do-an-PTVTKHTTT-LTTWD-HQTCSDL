@@ -49,10 +49,11 @@
             // combo_Phong
             // 
             this.combo_Phong.FormattingEnabled = true;
-            this.combo_Phong.Location = new System.Drawing.Point(335, 56);
+            this.combo_Phong.Location = new System.Drawing.Point(356, 52);
             this.combo_Phong.Name = "combo_Phong";
             this.combo_Phong.Size = new System.Drawing.Size(137, 21);
             this.combo_Phong.TabIndex = 0;
+            this.combo_Phong.SelectedIndexChanged += new System.EventHandler(this.combo_Phong_SelectedIndexChanged);
             // 
             // combo_Hoten
             // 
@@ -118,7 +119,7 @@
             // Picktime2
             // 
             this.Picktime2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.Picktime2.Location = new System.Drawing.Point(335, 105);
+            this.Picktime2.Location = new System.Drawing.Point(356, 105);
             this.Picktime2.Name = "Picktime2";
             this.Picktime2.Size = new System.Drawing.Size(137, 20);
             this.Picktime2.TabIndex = 8;
@@ -200,6 +201,7 @@
             this.MaximumSize = new System.Drawing.Size(740, 446);
             this.MinimumSize = new System.Drawing.Size(740, 446);
             this.Name = "frm_dangki";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng kí thuê phòng";
             this.Load += new System.EventHandler(this.frm_dangki_Load);
             this.group_thongtindangki.ResumeLayout(false);

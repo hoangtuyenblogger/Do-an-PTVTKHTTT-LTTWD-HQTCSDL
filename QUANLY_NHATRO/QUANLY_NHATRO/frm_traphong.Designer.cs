@@ -174,6 +174,7 @@
             this.MaximumSize = new System.Drawing.Size(623, 419);
             this.MinimumSize = new System.Drawing.Size(623, 419);
             this.Name = "frm_traphong";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Trả phòng";
             this.Load += new System.EventHandler(this.frm_traphong_Load);
             this.groupbox.ResumeLayout(false);

@@ -40,6 +40,7 @@
             this.combo_nguoithanhtoan = new System.Windows.Forms.ComboBox();
             this.combo_Phong = new System.Windows.Forms.ComboBox();
             this.group_chitietdichvu = new System.Windows.Forms.GroupBox();
+            this.combo_tienphong = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txt_gia_internet = new System.Windows.Forms.TextBox();
             this.txt_sodien = new System.Windows.Forms.TextBox();
@@ -62,7 +63,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.btn_thanhtoan = new System.Windows.Forms.Button();
-            this.combo_tienphong = new System.Windows.Forms.ComboBox();
             this.group_thongtinthanhtoan.SuspendLayout();
             this.group_chitietdichvu.SuspendLayout();
             this.group_hoadon.SuspendLayout();
@@ -182,6 +182,15 @@
             this.group_chitietdichvu.TabIndex = 6;
             this.group_chitietdichvu.TabStop = false;
             this.group_chitietdichvu.Text = "Chi tiết dịch vụ";
+            // 
+            // combo_tienphong
+            // 
+            this.combo_tienphong.FormattingEnabled = true;
+            this.combo_tienphong.Location = new System.Drawing.Point(87, 25);
+            this.combo_tienphong.Name = "combo_tienphong";
+            this.combo_tienphong.Size = new System.Drawing.Size(199, 21);
+            this.combo_tienphong.TabIndex = 4;
+            this.combo_tienphong.SelectedIndexChanged += new System.EventHandler(this.combo_tienphong_SelectedIndexChanged);
             // 
             // label12
             // 
@@ -386,15 +395,6 @@
             this.btn_thanhtoan.UseVisualStyleBackColor = true;
             this.btn_thanhtoan.Click += new System.EventHandler(this.btn_thanhtoan_Click);
             // 
-            // combo_tienphong
-            // 
-            this.combo_tienphong.FormattingEnabled = true;
-            this.combo_tienphong.Location = new System.Drawing.Point(87, 25);
-            this.combo_tienphong.Name = "combo_tienphong";
-            this.combo_tienphong.Size = new System.Drawing.Size(199, 21);
-            this.combo_tienphong.TabIndex = 4;
-            this.combo_tienphong.SelectedIndexChanged += new System.EventHandler(this.combo_tienphong_SelectedIndexChanged);
-            // 
             // frm_tinhtien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -409,6 +409,7 @@
             this.MaximumSize = new System.Drawing.Size(815, 503);
             this.MinimumSize = new System.Drawing.Size(815, 503);
             this.Name = "frm_tinhtien";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thanh toán tiền trọ";
             this.Load += new System.EventHandler(this.frm_tinhtien_Load);
             this.group_thongtinthanhtoan.ResumeLayout(false);

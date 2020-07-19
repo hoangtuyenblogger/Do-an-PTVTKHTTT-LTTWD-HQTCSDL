@@ -23,11 +23,14 @@ namespace QUANLY_NHATRO
         {
             Connect _conn = new Connect();
             _conn.Create_connect();
-           
-            string query = "SELECT * FROM TaiKhoan Where Username = '"+ taikhoan +"'  and Password = '" + matkhau + "'";
-            _conn.cm = new SqlCommand(query, _conn.conn);
+            _conn.cm.CommandType = CommandType.StoredProcedure;
+            _conn.cm.Connection = _conn.conn;
+            _conn.cm.CommandText = "Login";
+            _conn.cm.Parameters.AddWithValue("@username", txtTaiKhoan.Text.ToString());
+            _conn.cm.Parameters.AddWithValue("@password", txtMatKhau.Text.ToString());
+
             SqlDataReader dr = _conn.cm.ExecuteReader();
-            if(dr.Read()) //nếu tồn tại
+            if(dr.Read()) //
             {
                 MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 _conn.Disconnect();
@@ -56,6 +59,19 @@ namespace QUANLY_NHATRO
             {
                 //
             }
+        }
+
+        private void txtMatKhau_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                btnLogin_Click(this, new EventArgs());
+            }
+        }
+
+        private void Form_Login_MouseEnter(object sender, EventArgs e)
+        {
+            txtTaiKhoan.Focus();
         }
     }
 }

@@ -38,6 +38,8 @@ namespace QUANLY_NHATRO
                 cm = new SqlCommand("SELECT * FROM VIEW_PHONGTRO_CONTRONG", _conn.conn);
                 da = new SqlDataAdapter(cm);
                 da.Fill(ds, "PHONGTRO");
+
+
             }
             catch (Exception E)
             {
@@ -53,6 +55,8 @@ namespace QUANLY_NHATRO
             combo_Phong.DataSource = ds.Tables["PHONGTRO"];
             combo_Phong.DisplayMember = "TenPhong";
             combo_Phong.ValueMember = "MaPhong";
+
+         
 
         }
 
@@ -94,6 +98,11 @@ namespace QUANLY_NHATRO
         private void btn_thoat_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void combo_Phong_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

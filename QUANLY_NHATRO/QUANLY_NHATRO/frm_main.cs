@@ -18,7 +18,7 @@ namespace QUANLY_NHATRO
             InitializeComponent();
         }
 
-        bool login_status = false;
+
         private void frm_main_Load(object sender, EventArgs e)
         {
             Connect _conn = new Connect();
@@ -27,12 +27,21 @@ namespace QUANLY_NHATRO
             DATA_VIEW.DataSource = _conn.ds.Tables[0];
             DATA_VIEW.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             DATA_VIEW.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+
+            DataSet ds = new DataSet();
+            SqlCommand cm = new SqlCommand("SELECT * FROM view_THONGTIN_KHACHTRO_PHONGTRO", _conn.conn);
+            SqlDataAdapter da = new SqlDataAdapter(cm);
+            da.Fill(ds, "TATCA_TIENPHONG");
+            // combo phòng
+            combo_Phong.DataSource = ds.Tables["TATCA_TIENPHONG"];
+            combo_Phong.DisplayMember = "TenPhong";
+            combo_Phong.ValueMember = "MaPhong";
         }
 
         private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DialogResult dl =  MessageBox.Show("Bạn có muốn thoát?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-            if(dl == DialogResult.OK)
+            DialogResult dl = MessageBox.Show("Bạn có muốn thoát?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (dl == DialogResult.OK)
             {
                 this.Close();
             }
@@ -84,6 +93,25 @@ namespace QUANLY_NHATRO
             frm_main main = new frm_main();
             main.Show();
             this.Close();
+        }
+
+
+
+        private void combo_Phong_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            Connect _conn = new Connect();
+            _conn.Create_connect();
+
+            DataTable tb = new DataTable();
+
+            SqlCommand cm = new SqlCommand("SELECT HoTen, GioiTinh, TenPhong, NgayVaoO, TenPhong, MaPhong, SoNguoiHienTai FROM view_THONGTIN_KHACHTRO_PHONGTRO WHERE MaPhong = '" + combo_Phong.SelectedValue.ToString() + "' ",_conn.conn);
+            SqlDataAdapter da = new SqlDataAdapter(cm);
+            da.Fill(tb);
+
+            _conn.Disconnect();
+            DATA_VIEW.DataSource = tb;
+            txt_SoNguoiHienTai.Text = tb.Rows[0][6].ToString();
+
         }
 
         

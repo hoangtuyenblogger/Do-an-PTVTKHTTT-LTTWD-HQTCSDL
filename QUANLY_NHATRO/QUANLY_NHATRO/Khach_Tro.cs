@@ -160,6 +160,11 @@ namespace QUANLY_NHATRO
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
+            DialogResult xacnhan = MessageBox.Show("Bạn có chắc chắn muốn xóa?","Thông báo",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+            if(xacnhan == DialogResult.No)
+            {
+                return;
+            }
             Connect _conn = new Connect();
             _conn.Create_connect();
             SqlCommand cm = _conn.cm;
